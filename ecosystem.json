@@ -1,0 +1,25 @@
+{
+  "apps" : [
+    {
+      "name": "koa_study",
+      "script": "src/app.js",
+      "env": {
+        "SQL_ENV": "test",
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy" : {
+    "production" : {
+      "user" : "root",
+      "host" : "172.16.237.113 -p 53808",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:kuaipeilian/koa_study.git",
+      "path" : "/root/fesrc/koa_study",
+      "post-deploy" : "git reset --hard && git pull && npm install && npm start"
+    }
+  }
+}

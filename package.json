@@ -1,0 +1,41 @@
+{
+  "name": "koa_study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "SQL_ENV=dev nodemon src/app.js",
+    "test": "SQL_ENV=test nodemon src/app.js",
+    "prod": "SQL_ENV=prod nodemon src/app.js",
+    "start": "pm2 start ecosystem.json",
+    "startProd": "pm2 start pm2.prod.json",
+    "imsql": "mysql -u root -p prodadmin < prodadmin.sql",
+    "bksql": "mysqldump -u root -p prodadmin > prodadmin.sql",
+    "pm2": "pm2 deploy production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ali-oss": "^6.1.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.3.0",
+    "koa": "^2.6.2",
+    "koa-body": "^4.0.4",
+    "koa-bodyparser": "^4.2.1",
+    "koa-json": "^2.0.2",
+    "koa-jwt": "^3.5.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static2": "^0.1.8",
+    "koa2-cors": "^2.0.6",
+    "moment": "^2.24.0",
+    "mysql2": "^1.6.1",
+    "path-to-regexp": "^2.4.0",
+    "qs": "^6.8.0",
+    "request": "^2.88.0",
+    "sequelize": "^4.41.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}

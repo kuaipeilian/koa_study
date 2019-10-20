@@ -1,0 +1,15 @@
+{
+  "apps" : [
+    {
+      "name": "koa_study",
+      "script": "src/app.js",
+      "env": {
+        "SQL_ENV": "prod",
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
