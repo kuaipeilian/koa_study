@@ -33,7 +33,7 @@
     "path-to-regexp": "^2.4.0",
     "qs": "^6.8.0",
     "request": "^2.88.0",
-    "sequelize": "^4.41.0"
+    "sequelize": "^5.15.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.7"
